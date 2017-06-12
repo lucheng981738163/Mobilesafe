@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tcv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece8e8"
+    android:orientation="vertical">
+    <TextView
+
+        android:gravity="center"
+        android:text="手机卡绑定"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+
+        android:textColor="#ffff66"
+        android:textSize="30sp"
+        android:background="#99cc66"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:text="通过绑定sim卡\n下次重启手机如果发现sim卡变化\n就会发送报警短信"
+        android:textColor="#e705d8"
+        android:textSize="20sp" />
+
+    <com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view
+        android:id="@+id/sim_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        tcv:text="点击绑定sim卡"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view>
+
+
+<com.lc.mobilesafe.com.lc.uis.pre_next_star_view
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/star2">
+
+</com.lc.mobilesafe.com.lc.uis.pre_next_star_view>
+
+
+
+</LinearLayout>

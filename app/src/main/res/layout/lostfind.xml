@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece8e8"
+    android:orientation="vertical">
+    <TextView
+        android:gravity="center"
+        android:text="欢迎使用手机防盗"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:textColor="#ffff66"
+        android:textSize="30sp"
+        android:background="#99cc66"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:text="安全号码"
+            android:textColor="#e705d8"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/tv_phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200sp"
+            android:layout_marginTop="10sp"
+            android:text="num"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="10sp"
+        android:text="防盗保护是否开启"
+        android:textColor="#e705d8"
+        android:textSize="25sp"
+        android:drawableRight="@android:drawable/ic_lock_lock"/>
+
+
+    <Button
+        android:textColor="#3e1f3c"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="resetup"
+        android:text="重新进入设置界面" />
+
+    <TextView
+        android:background="#878686"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="10sp"
+        android:text="功能简介"
+        android:textColor="#e705d8"
+        android:textSize="25sp" />
+    <TextView
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:text="GPS追踪:#*location*#"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:text="播放报警音乐:#*alarm*#"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:text="远程删除数据:#*wipedata*#"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:text="远程锁屏:#*lockscreen*#"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+    <!--<WebView-->
+    <!--android:id="@+id/wb_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></WebView>-->
+</LinearLayout>

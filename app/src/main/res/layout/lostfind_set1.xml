@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ece8e8"
+    android:orientation="vertical"
+    >
+    <TextView
+
+        android:gravity="center"
+        android:text="欢迎使用手机防盗"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+
+        android:textColor="#ffff66"
+        android:textSize="30sp"
+        android:background="#99cc66"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机防盗卫士:"
+        android:textColor="#e705d8"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:text="sim卡变更报警"
+        android:textColor="#e705d8"
+        android:textSize="20sp" />
+
+    <TextView
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:text="GPS追踪"
+        android:textColor="#e705d8"
+        android:textSize="20sp" />
+
+    <TextView
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:text="远程数据销毁"
+        android:textColor="#e705d8"
+        android:textSize="20sp" />
+    <TextView
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:text="远程锁屏"
+        android:textColor="#e705d8"
+        android:textSize="20sp" />
+
+<com.lc.mobilesafe.com.lc.uis.pre_next_star_view
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/star1">
+
+</com.lc.mobilesafe.com.lc.uis.pre_next_star_view>
+</LinearLayout>

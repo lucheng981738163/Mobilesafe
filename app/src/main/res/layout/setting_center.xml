@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tcv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <TextView
+        android:gravity="center"
+        android:text="设置中心"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/jishi"
+        android:textColor="#ffff66"
+        android:textSize="30sp"
+        android:background="#99cc66"
+        />
+
+    <com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view
+        tcv:text="是否打开自动更新1"
+        tcv:update_on="自动更新已打开...1"
+        tcv:update_off="自动更新已关闭...1"
+        android:id="@+id/tcv_autoupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view>
+    <com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view
+        tcv:text="是否打开自动更新2"
+        tcv:update_on="自动更新已打开...2"
+        tcv:update_off="自动更新已关闭..2."
+        android:id="@+id/tcv_autoupdate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view>
+
+
+
+</LinearLayout>
