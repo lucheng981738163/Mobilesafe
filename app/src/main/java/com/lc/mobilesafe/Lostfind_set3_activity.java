@@ -1,14 +1,15 @@
 package com.lc.mobilesafe;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,16 +22,23 @@ import com.lc.mobilesafe.com.lc.uis.pre_next_star_view;
  */
 
 public class Lostfind_set3_activity extends Activity {
+    // 声明文本框
+
+    // 声明姓名，电话
+    private String username, usernumber;
     private pre_next_star_view star3;
     private GestureDetector gestureDetector;
     private EditText et_phonenumber;
     private SharedPreferences sp;
-private ContentResolver resolver;
+
+    private ContentResolver resolver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lostfind_set3);
-        resolver=getContentResolver();
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, 123);
+        resolver = getContentResolver();
         sp = getSharedPreferences("config", MODE_PRIVATE);
         et_phonenumber = (EditText) findViewById(R.id.et_phonenumber);
         star3 = (pre_next_star_view) findViewById(R.id.star3);
@@ -82,20 +90,33 @@ private ContentResolver resolver;
         switch (requestCode) {
             case 0:
                 if (resultCode == Activity.RESULT_OK) {
-                    Cursor cursor = resolver.query(Uri.parse("content://com.android.contacts/raw_contacts"), new String[]{"contact_id"}, null, null, null);
-                    while (cursor.moveToNext()) {
-                        String contact_id = cursor.getString(0);
-                        if (contact_id != null) {
-                            Cursor datacursor = resolver.query(Uri.parse("content://com.android.contacts/data"), new String[]{"data1", "mimetype"}, "contact_id=?", new String[]{"contact_id"}, null);
-                           while (datacursor.moveToNext()){
-                               if ("vnd.adnroid.cursor.item/name".equals(datacursor.getString(1))){
 
-                               }else if("vnd.adnroid.cursor.item/phone_v2".equals(datacursor.getString(1))){
 
-                               }
-                           }
-                        }
+                    Cursor cursor = managedQuery(data.getData(), null, null, null, null);
+                    cursor.moveToFirst();
+                    username = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+                    String contactid = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+                    Cursor phone = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + contactid, null, null);
+                    while (phone.moveToNext()) {
+                        usernumber = phone
+                                .getString(phone
+                                        .getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                        et_phonenumber.setText(usernumber);
                     }
+
+//                    while (cursor.moveToNext()) {
+//                        String contact_id = cursor.getString(0);
+//                        if (contact_id != null) {
+//                            Cursor datacursor = resolver.query(Uri.parse("content://com.android.contacts/data"), new String[]{"data1", "mimetype"}, "contact_id=?", new String[]{"contact_id"}, null);
+//                           while (datacursor.moveToNext()){
+//                               if ("vnd.adnroid.cursor.item/name".equals(datacursor.getString(1))){
+//
+//                               }else if("vnd.adnroid.cursor.item/phone_v2".equals(datacursor.getString(1))){
+//
+//                               }
+//                           }
+//                        }
+//                    }
 
                 }
                 break;

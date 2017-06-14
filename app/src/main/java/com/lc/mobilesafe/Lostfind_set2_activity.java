@@ -11,6 +11,7 @@ import android.telephony.TelephonyManager;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.lc.mobilesafe.com.lc.uis.Textview_checkbox_view;
 import com.lc.mobilesafe.com.lc.uis.pre_next_star_view;
@@ -83,6 +84,11 @@ public class Lostfind_set2_activity extends Activity {
     }
 
     public void bt_setup_next(View view) {
+        if (!sp.getBoolean("sim_binded", false)){
+            Toast.makeText(this,"绑定sim卡后,才能开启下一功能",Toast.LENGTH_SHORT).show();
+            return;
+
+        }
         startActivity(new Intent(this, Lostfind_set3_activity.class));
         finish();
         overridePendingTransition(R.anim.next_in, R.anim.next_out);

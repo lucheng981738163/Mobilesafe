@@ -48,7 +48,7 @@ public class Home_activity extends Activity {
 
                         break;
                     case 2:
-
+                       ;
                         break;
                     case 8:
                         Toast.makeText(Home_activity.this, "点击了设置中心", Toast.LENGTH_SHORT).show();

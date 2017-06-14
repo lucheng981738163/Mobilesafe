@@ -66,6 +66,8 @@
         android:textColor="#e705d8"
         android:textSize="25sp" />
     <TextView
+        android:clickable="true"
+        android:onClick="gpsseesee"
         android:layout_margin="10dp"
         android:gravity="center_vertical"
         android:textColor="#000000"
